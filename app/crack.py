@@ -80,13 +80,13 @@ class Brute:
 
 	def main(self):
 		while True:
-			file = raw_input('\nList id (ex: dump/xxx.json): ')
+			file = raw_input('\nID LIST (Misal: dump/xxx.json): ')
 			try:
 				list = open(file, 'r').read()
 				object = json.loads(list)
 				break
 			except IOError:
-				print("\n\033[0;91mOops, file '%s' not Found!\033[0m"% file)
+				print("\n\033[0;91mOops, file '%s' Tidak Ada!!\033[0m"% file)
 		self.target = []
 		for user in object:
 			try:
@@ -123,10 +123,10 @@ class Brute:
 			except: pass
 		if len(self.target) == 0:
 			exit("\n\033[0;91m Oops, id not found in file '%s'\033[0m"% file)
-		ask = raw_input('Use password defaults OR manual? [D/m]: ')
+		ask = raw_input('Pakai Password default Atau Manual? [D/m]: ')
 		if ask.lower() == 'm':
 			while True:
-				print('\n\033[0;92mSet password use (,) for new password, EX: sayang,doraemon,bangsat\n\033[0m')
+				print('\n\033[0;92mSet Pakai Password (,) Buat Baru Password, Misal: sayang,doraemon,bangsat\n\033[0m')
 				self.setpw = raw_input('Set password: ').strip().split(',')
 				if self.setpw[0] != '':
 					break
