@@ -37,4 +37,4 @@ def loginFb(self, url, config):
 			time.sleep(2)
 			break
 		else:
-			print('\n\033[0;91mWrong cookies, please try Again.\n\033[0m')
+			print('\n\033[0;91mCookie Salah, Coba Lagi.\n\033[0m')
