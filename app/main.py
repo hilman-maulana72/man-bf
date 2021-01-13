@@ -31,8 +31,8 @@ class Brute(object):
 		self.menu += '  [ \033[0;96m02\033[0m ]  Dump ID Teman\n'
 		self.menu += '  [ \033[0;96m03\033[0m ]  Dump ID Dari Search name\n'
 		self.menu += '  [ \033[0;96m04\033[0m ]  Dump ID Dari like status\n'
-		self.menu += '  [ \033[0;96m05\033[0m ]  Start Crack\n'
-		self.menu += '  [ \033[0;96m00\033[0m ]  Remove cookies\n'
+		self.menu += '  [ \033[0;96m05\033[0m ]  Mulai Crack\n'
+		self.menu += '  [ \033[0;96m00\033[0m ]  Hapus cookies\n'
 		if self.cookie == False:
 			login.loginFb(self, self.url, self.config)
 			self.cookie = self.config.loadCookie()
@@ -55,7 +55,7 @@ class Brute(object):
 		print(self.config.banner())
 		html = parser(response, 'html.parser')
 		print('_________________________________________________________')
-		print('\n(\033[0;96m•\033[0m) AKUN FACEBOOK NAMA : '.decode('utf-8')+html.title.text.upper())
+		print('\n(\033[0;96m•\033[0m) Nama Akun Facebook : '.decode('utf-8')+html.title.text.upper())
 		print('_________________________________________________________')
 		print(self.menu)
 		try:
