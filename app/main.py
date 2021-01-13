@@ -27,10 +27,10 @@ class Brute(object):
 		self.config = config.Config()
 		self.cookie = self.config.loadCookie()
 		self.menu = '\n'
-		self.menu += '  [ \033[0;96m01\033[0m ]  Dump Id Friends lists\n'
-		self.menu += '  [ \033[0;96m02\033[0m ]  Dump Id Friends\n'
-		self.menu += '  [ \033[0;96m03\033[0m ]  Dump Id by Search name\n'
-		self.menu += '  [ \033[0;96m04\033[0m ]  Dump Id from likes status\n'
+		self.menu += '  [ \033[0;96m01\033[0m ]  Dump ID Teman list\n'
+		self.menu += '  [ \033[0;96m02\033[0m ]  Dump ID Teman\n'
+		self.menu += '  [ \033[0;96m03\033[0m ]  Dump ID Dari Search name\n'
+		self.menu += '  [ \033[0;96m04\033[0m ]  Dump ID Dari like status\n'
 		self.menu += '  [ \033[0;96m05\033[0m ]  Start Crack\n'
 		self.menu += '  [ \033[0;96m00\033[0m ]  Remove cookies\n'
 		if self.cookie == False:
@@ -43,7 +43,7 @@ class Brute(object):
 			self.main(response)
 		else:
 			os.remove('log/cookies.log')
-			print('\n\033[0;91m[WARNING] Cookies invalids, please login again.\033[0m')
+			print('\n\033[0;91m[WARNING] Cookies Tidak Valid, Harap login Kembali.\033[0m')
 			raw_input('\n[ Press Enter]')
 			login.loginFb(self, self.url, self.config)
 			self.cookie = self.config.loadCookie()
@@ -55,7 +55,7 @@ class Brute(object):
 		print(self.config.banner())
 		html = parser(response, 'html.parser')
 		print('_________________________________________________________')
-		print('\n(\033[0;96m•\033[0m) ACTIVE USER : '.decode('utf-8')+html.title.text.upper())
+		print('\n(\033[0;96m•\033[0m) AKUN FACEBOOK NAMA : '.decode('utf-8')+html.title.text.upper())
 		print('_________________________________________________________')
 		print(self.menu)
 		try:
@@ -75,7 +75,7 @@ class Brute(object):
 		elif choose == 0:
 			ask = raw_input('\nAre you Sure? [y/N]: ')
 			if ask.lower() == 'y':
-				print('\nRemoving cookies...')
+				print('\nMenghapus cookies...')
 				time.sleep(2)
 				os.remove('log/cookies.log')
 				print('\n\033[0;92mSuccess removed!\033[0m')
