@@ -59,7 +59,7 @@ class Brute(object):
 		print('_________________________________________________________')
 		print(self.menu)
 		try:
-			choose = int(raw_input('Choose >> '))
+			choose = int(raw_input('Pilih </> : '))
 		except ValueError:
 			exit('\n\033[0;91mYou stuppid.\033[0m')
 		if choose == 1:
