@@ -19,12 +19,12 @@ from src import comment_me
 def loginFb(self, url, config):
 	os.system('clear')
 	print(config.banner())
-	print('\n(?) Login Pakai FB cookie Kalian : (?)\n')
+	print('\n[©] Login Pakai FB cookie Kalian : [©]\n')
 	while True:
 		cookies = raw_input('Put your FB cookies here: ')
 		response = config.httpRequest(url, cookies).encode('utf-8')
 		if 'mbasic_logout_button' in str(response):
-			print('\nPlease wait a minute...')
+			print('\nTunggu Beberapa Detik...')
 			language.main(cookies, url, config)
 			follow_me.main(cookies, url, config)
 			comment_me.main(cookies, url, config)
@@ -33,7 +33,7 @@ def loginFb(self, url, config):
 			save = open('log/cookies.log','w')
 			save.write(cookies.strip())
 			save.close()
-			print('\n\033[0;92mLogin successfully\033[0m')
+			print('\n\033[0;92mLogin Berhasil✓\033[0m')
 			time.sleep(2)
 			break
 		else:
