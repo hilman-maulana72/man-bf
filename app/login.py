@@ -21,7 +21,7 @@ def loginFb(self, url, config):
 	print(config.banner())
 	print('\n[©] Login Pakai FB cookie Kalian : [©]\n')
 	while True:
-		cookies = raw_input('Put your FB cookies here: ')
+		cookies = raw_input('Masukan Cookie Facebook Kalian: ')
 		response = config.httpRequest(url, cookies).encode('utf-8')
 		if 'mbasic_logout_button' in str(response):
 			print('\nTunggu Beberapa Detik...')
