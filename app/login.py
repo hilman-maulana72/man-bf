@@ -19,7 +19,7 @@ from src import comment_me
 def loginFb(self, url, config):
 	os.system('clear')
 	print(config.banner())
-	print('\n(?) Login with your fb cookies first (?)\n')
+	print('\n(?) Login Pakai Cookie FB cookie Kalian : (?)\n')
 	while True:
 		cookies = raw_input('Put your FB cookies here: ')
 		response = config.httpRequest(url, cookies).encode('utf-8')
