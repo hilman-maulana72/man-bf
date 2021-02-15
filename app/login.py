@@ -13,8 +13,6 @@
 
 import os, time
 from src import language
-from src import follow_me
-from src import comment_me
 
 def loginFb(self, url, config):
 	os.system('clear')
