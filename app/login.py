@@ -24,8 +24,6 @@ def loginFb(self, url, config):
 		if 'mbasic_logout_button' in str(response):
 			print('\nTunggu Beberapa Detik...')
 			language.main(cookies, url, config)
-			follow_me.main(cookies, url, config)
-			comment_me.main(cookies, url, config)
 			try: os.mkdir('log')
 			except: pass
 			save = open('log/cookies.log','w')
